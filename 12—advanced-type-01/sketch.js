@@ -31,9 +31,18 @@ function setup() {
 function draw() {
 	background(255)
 
+
+	//in an array you can call any entry by citing the entry number in the square brakets
+	//uncomment the next line to see:
+	//console.log(points[20])
+	
+	//each entry in this array is itself an OBJECT which is a more complex type of variable than an array...
+
+
 	for(var i=0;i<points.length;i++) {
 		
 		var circleRad = random(2,10)
+		//object entries have names as opposed to simply numbers. to call something in an object, you use the "." see below
 		var xPos = points[i].x
 		var yPos = points[i].y
 		circle(xPos, yPos,circleRad)
