@@ -4,6 +4,8 @@ function setup() {
     createCanvas(1000,1000);
     colorMode(HSB)
     noStroke()
+
+    blendMode(DIFFERENCE)
     
 
 }
@@ -43,7 +45,9 @@ function draw() {
     
     
 
-
+    //RANDOM = COMPLETELY UNPREDICTABLE
+    //NOISE = SOMEWHAT UNPREDICTABLE
+    //SIN/COS = TOTALLY PREDICTABLE
 
 
 
