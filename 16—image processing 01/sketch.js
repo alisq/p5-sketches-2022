@@ -53,5 +53,4 @@ function draw() {
 	pop()
 	pop()
 
-	
 }
