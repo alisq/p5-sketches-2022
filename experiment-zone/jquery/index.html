@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+
+	<style>
+		/* ALICE PUT YOUR STYLE IN A SEPARATE FILE, I'M JUST BEING LAZY. */
+
+
+		body {
+			height: 8000px;
+		}
+
+		.fixed {
+			position: fixed;
+			top: 50px;
+			left: 50px;
+
+		}
+
+		.square {
+			width: 50px;
+			height: 50px;
+			background: red;
+		}
+
+
+			.rect {
+			width: 150px;
+			height: 50px;
+			background: red;
+			position: fixed;
+			right: 20px;
+		}
+
+		.blue {
+			background: blue;
+			color: white;
+		}
+
+
+
+	</style>
+</head>
+<body>
+
+	<div class="square"></div>
+	<div class="rect"></div>
+
+	<h1>New Website</h1>
+
+	<h2 class="fixed">SEPARATE SCRRRRIPTS!!!</h2>
+
+
+
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+<script>
+
+	//ALICE PUT YOUR SCRIPT IN A SEPARATE FILE, I'M JUST BEING LAZY.
+
+
+	$(".square").click(function(){
+		
+		$("h1").toggleClass("blue")
+	})
+
+	$(".rect").hover(function(){
+		$("h1").addClass("blue")
+	},function(){
+		$("h1").removeClass("blue")
+		console.log("ALICE YOU BETTER SEPARATE THE SCRIPTS AND STYLES DAMMIT")
+	})
+
+
+	$(window).scroll(function(){
+		let st = $(window).scrollTop();
+		let sd = $("body").height()-$(window).height();
+
+		let sr = st/sd;
+		console.log(sr)
+
+		$(".fixed").css({
+			"transform":"rotate("+sr*360+"deg)"
+		})
+
+		$(".rect").html("<h2>"+st+"</h2>l")
+	})
+
+</script>
+</body>
+</html>
